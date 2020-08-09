@@ -4,18 +4,15 @@ version = "0.23.2"
 authors = ["Aaron Housh <dispersias@gmail.com>"]
 edition = "2018"
 
-[[example]]
-name = "test_example"
-crate-type = [ "cdylib" ]
+[lib]
+crate-type = [ "lib", "cdylib" ]
 
 [dependencies]
 winit = { git = "https://github.com/rust-windowing/winit" }
-
-[dev-dependencies]
 simple_logger = "1"
 
 [target.'cfg(target_os = "android")'.dependencies]
-ndk-glue = "0.1.0"
+ndk-glue = { git = "https://github.com/rust-windowing/android-ndk-rs" }
 
 [package.metadata.android]
 build_targets = [ "armv7-linux-androideabi", "aarch64-linux-android", "i686-linux-android", "x86_64-linux-android"]
