@@ -24,8 +24,6 @@ fn main() {
     });
 
     event_loop.run(move |event, _, control_flow| {
-        println!("{:?}", event);
-
         *control_flow = ControlFlow::Wait;
 
         match event {
