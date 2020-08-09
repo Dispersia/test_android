@@ -1,1 +1,1 @@
-`cargo apk run --example test_example`
+`cargo apk run`
