@@ -10,6 +10,7 @@ use winit::{
 ndk_glue::ndk_glue!(main);
 
 fn main() {
+    //simple_logger::init().unwrap();
     let event_loop = EventLoop::new();
 
     let window = WindowBuilder::new()
