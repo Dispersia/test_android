@@ -1,0 +1,27 @@
+[package]
+name = "test_android"
+version = "0.23.2"
+authors = ["Aaron Housh <dispersias@gmail.com>"]
+description = "test"
+edition = "2018"
+keywords = ["windowing"]
+license = "Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/rust-windowing/winit"
+documentation = "https://docs.rs/winit"
+categories = ["gui"]
+
+[[example]]
+name = "test_example"
+crate-type = [ "cdylib" ]
+
+[dependencies]
+winit = "0.22"
+
+[target.'cfg(target_os = "android")'.dependencies]
+ndk = "0.1.0"
+ndk-sys = "0.1.0"
+ndk-glue = "0.1.0"
+
+[package.metadata.android]
+build_targets = [ "armv7-linux-androideabi", "aarch64-linux-android", "i686-linux-android", "x86_64-linux-android"]
